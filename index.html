@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn Tài Mobile - Chuyên Khoa Sửa Chữa Điện Thoại Cao Cấp</title>
+    <meta name="description" content="Khám phá chuyên ngành Sửa chữa Điện thoại chuyên nghiệp tại Văn Tài Mobile. Đào tạo vi mạch phần cứng, thay kính màn hình, sửa phần mềm nâng cao với trang thiết bị tối tân.">
+    <meta name="keywords" content="sửa chữa điện thoại, học sửa điện thoại, vi mạch điện thoại, ép kính, kỹ thuật phần cứng, lập trình phần mềm điện thoại, Văn Tài Mobile">
+    <meta name="author" content="Văn Tài Mobile">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="tech-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <i data-lucide="cpu" class="logo-icon"></i>
+                <span>VĂN TÀI<span class="highlight"> MOBILE</span></span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">Giới Thiệu</a>
+                <a href="#founders" class="nav-link">Người Sáng Lập</a>
+                <a href="#quote-lookup" class="nav-link">Báo Giá & Tra Cứu</a>
+                <a href="#skills" class="nav-link">Chương Trình Học</a>
+                <a href="#simulator" class="nav-link">Trình Giả Lập</a>
+                <a href="#booking-section" class="nav-link">Đặt Lịch</a>
+                <a href="admin.html" class="nav-link"><i data-lucide="lock" style="width:14px; height:14px; display:inline-block; vertical-align:middle; margin-right:4px;"></i>Quản Trị</a>
+                <a href="#booking-section" class="btn-register">Đặt Lịch Ngay</a>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-new">
+                    <span class="badge-dot"></span> CHUYÊN NGÀNH KỸ THUẬT SỐ XU HƯỚNG 2026
+                </div>
+                <h1 class="hero-title" id="dyn-hero-title">
+                    Làm Chủ Công Nghệ<br>
+                    <span class="gradient-text">Sửa Chữa Điện Thoại</span><br>
+                    Chuyên Nghiệp
+                </h1>
+                <p class="hero-desc" id="dyn-hero-desc">
+                    Trở thành Kỹ sư Phần cứng & Phần mềm di động cấp cao tại Văn Tài Mobile. Đào tạo trực quan, thực hành vi mạch dưới kính hiển vi điện tử và làm chủ các dòng smartphone hiện đại nhất.
+                </p>
+                <div class="hero-actions">
+                    <a href="#simulator" class="btn btn-primary">
+                        <i data-lucide="play-circle"></i> Trải Nghiệm Thực Tế
+                    </a>
+                    <a href="#quote-lookup" class="btn btn-secondary">Báo Giá Sửa Chữa</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">98%</span>
+                        <span class="stat-lbl">Học viên có việc ngay</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">15M+</span>
+                        <span class="stat-lbl">Thu nhập khởi điểm (VND)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">80%</span>
+                        <span class="stat-lbl">Thời lượng thực hành</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="image-wrapper-glow" data-tilt>
+                    <!-- Glow effect layers -->
+                    <div class="glow-bg"></div>
+                    <div class="card-glow"></div>
+                    <img src="assets/phone_repair_hero.png" alt="Futuristic Phone Repair" class="hero-img">
+                    <div class="floating-card c1">
+                        <i data-lucide="activity" class="float-icon"></i>
+                        <div>
+                            <h4>Chẩn Đoán IC</h4>
+                            <p>Đo đạc vi mạch cấp độ cao</p>
+                        </div>
+                    </div>
+                    <div class="floating-card c2">
+                        <i data-lucide="shield-check" class="float-icon"></i>
+                        <div>
+                            <h4>Unlock OS</h4>
+                            <p>Nạp ROM & Bypass bảo mật</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview / About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tại Sao Nên Chọn Ngành Này?</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Thế giới có hơn 6 tỷ smartphone. Thiết bị hỏng hóc liên tục và nhu cầu kỹ thuật viên tay nghề cao chưa bao giờ giảm nhiệt.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="about-card-icon"><i data-lucide="zap"></i></div>
+                    <h3>Không Sợ Bị Thay Thế Bởi AI</h3>
+                    <p>Khác với các ngành thuần phần mềm, sửa chữa điện thoại yêu cầu sự khéo léo tỉ mỉ của đôi bàn tay và tư duy logic vật lý mà robot hay AI chưa thể thay thế trong nhiều thập kỷ tới.</p>
+                </div>
+                <div class="about-card scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="about-card-icon"><i data-lucide="trending-up"></i></div>
+                    <h3>Thu Nhập Tăng Trưởng Vượt Bội</h3>
+                    <p>Từ kỹ thuật viên cơ bản đến chuyên gia vi mạch cao cấp, thu nhập tăng theo kinh nghiệm. Các dịch vụ sửa mainboard dòng cao cấp như iPhone, Samsung đem lại lợi nhuận cực lớn.</p>
+                </div>
+                <div class="about-card scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="about-card-icon"><i data-lucide="wrench"></i></div>
+                    <h3>Khởi Nghiệp Dễ Dàng</h3>
+                    <p>Chỉ cần số vốn nhỏ để sắm bộ dụng cụ chuyên dụng, bạn đã có thể mở cửa hàng kinh doanh dịch vụ sửa chữa độc lập hoặc làm đối tác kỹ thuật cho các chuỗi lớn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders / Team Section -->
+    <section class="founders-section" id="founders">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Đội Ngũ Sáng Lập & Thợ Cả</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Chân dung hai kỹ sư công nghệ đứng đầu, trực tiếp đào tạo kỹ thuật viên và đảm nhận sửa chữa các pan bệnh phần cứng cao cấp tại Văn Tài Mobile.</p>
+            </div>
+            
+            <div class="founders-grid">
+                <!-- Founder Card 1 -->
+                <div class="founder-card tilt-card scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="founder-img-wrapper">
+                        <img src="assets/founder_1.jpg" alt="Trần Văn Tài" class="founder-img">
+                    </div>
+                    <span class="founder-role">Founder & Thợ Cả</span>
+                    <h3>Trần Văn Tài</h3>
+                    <p>Chuyên gia phần cứng vi mạch di động với hơn 10 năm kinh nghiệm thực chiến. Trực tiếp giảng dạy kỹ thuật khò hàn vi mạch nâng cao và chẩn đoán pan bệnh bo mạch phức tạp.</p>
+                    <div class="founder-socials">
+                        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="tel:0368273019" aria-label="phone"><i data-lucide="phone"></i></a>
+                    </div>
+                </div>
+
+                <!-- Founder Card 2 -->
+                <div class="founder-card tilt-card scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="founder-img-wrapper">
+                        <img src="assets/founder_2.jpg" alt="Nguyễn Quốc Nam" class="founder-img">
+                    </div>
+                    <span class="founder-role">Co-Founder & Trưởng Kỹ Thuật</span>
+                    <h3>Nguyễn Quốc Nam</h3>
+                    <p>Trưởng bộ phận sửa chữa phần mềm & Ép kính công nghệ cao. Chuyên gia ép cổ cáp màn hình Flagship, xử lý các pan phần mềm chuyên sâu và cứu dữ liệu ổ cứng di động.</p>
+                    <div class="founder-socials">
+                        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="tel:0368273019" aria-label="phone"><i data-lucide="phone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Price Quote & Progress Lookup (Dịch vụ & Báo giá) -->
+    <section class="quote-lookup" id="quote-lookup">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Báo Giá & Tra Cứu Trực Tuyến</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Công khai bảng giá minh bạch, nhận báo giá tự động lập tức và tra cứu tiến độ sửa chữa, bảo hành online.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="tab-control-wrapper">
+                <button class="btn-tab active" data-target="tab-quote"><i data-lucide="calculator"></i> Báo Giá Tự Động</button>
+                <button class="btn-tab" data-target="tab-tracking"><i data-lucide="search"></i> Tra Cứu Tiến Độ</button>
+                <button class="btn-tab" data-target="tab-warranty"><i data-lucide="shield-check"></i> Kiểm Tra Bảo Hành</button>
+            </div>
+
+            <div class="tab-content-container">
+                <!-- Tab 1: Automatic Quote -->
+                <div class="tab-pane active" id="tab-quote">
+                    <div class="pane-grid">
+                        <div class="quote-form-panel">
+                            <h3>Nhận Báo Giá Tức Thì</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 20px;">Lựa chọn dòng máy và lỗi kỹ thuật của bạn:</p>
+                            
+                            <div class="form-group">
+                                <label for="quote-brand">Thương hiệu</label>
+                                <select id="quote-brand">
+                                    <option value="">-- Chọn Hãng --</option>
+                                    <option value="apple">Apple (iPhone)</option>
+                                    <option value="samsung">Samsung</option>
+                                    <option value="oppo">Oppo</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" style="margin-top: 15px;">
+                                <label for="quote-model">Dòng máy</label>
+                                <select id="quote-model" disabled>
+                                    <option value="">-- Chọn dòng máy trước --</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 15px;">
+                                <label for="quote-service">Dịch vụ sửa chữa</label>
+                                <select id="quote-service" disabled>
+                                    <option value="">-- Chọn dịch vụ trước --</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="quote-result-panel">
+                            <div class="quote-result-card" id="quote-result-card">
+                                <i data-lucide="calculator" class="empty-icon"></i>
+                                <h4>Vui lòng chọn thông tin dòng máy để xem giá</h4>
+                                <p>Hệ thống sẽ tính toán chi phí linh kiện gốc và tiền công kỹ thuật.</p>
+                            </div>
+                            <!-- Result pricing (hidden by default) -->
+                            <div class="quote-result-price" id="quote-result-price" style="display: none;">
+                                <span class="device-name" id="res-device-name">iPhone 14 Pro Max</span>
+                                <span class="service-name" id="res-service-name">Thay Màn Hình Cảm Ứng</span>
+                                <div class="price-val-box">
+                                    <span class="price-label">Giá Dự Kiến (Trọn Gói)</span>
+                                    <span class="price-amount" id="res-price-amount">3,500,000 VND</span>
+                                </div>
+                                <div class="price-note">
+                                    <i data-lucide="info"></i>
+                                    <span>Giá đã bao gồm linh kiện chính hãng và bảo hành 6 tháng.</span>
+                                </div>
+                                <a href="#booking-section" class="btn btn-primary" id="btn-book-quote" style="width:100%; justify-content:center; margin-top:20px;">
+                                    Đặt Lịch Hẹn Sửa Ngay <i data-lucide="calendar"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Progress Tracking -->
+                <div class="tab-pane" id="tab-tracking">
+                    <div class="lookup-panel-box">
+                        <h3>Tra Cứu Tiến Độ Sửa Máy trực tuyến</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">Nhập mã phiếu biên nhận sửa chữa của bạn để xem quy trình xử lý thực tế.</p>
+                        
+                        <div class="lookup-input-bar">
+                            <input type="text" id="track-input" placeholder="Ví dụ: VT-12345 (Nhập thử VT-12345 để xem thử mẫu)">
+                            <button class="btn btn-primary" id="btn-track-submit"><i data-lucide="search"></i> Tra cứu</button>
+                        </div>
+
+                        <!-- Progress timeline display -->
+                        <div class="track-result-box" id="track-result" style="display: none;">
+                            <div class="track-info-header">
+                                <div>
+                                    <span class="track-device-lbl" id="track-device">Khách hàng: Nguyễn Văn A • Máy: iPhone 13 Pro</span>
+                                    <span class="track-tech-lbl" id="track-tech-assigned">Kỹ thuật viên đảm nhận: Trần Văn B</span>
+                                </div>
+                                <span class="badge badge-status" id="track-status-badge">Đang Sửa Chữa</span>
+                            </div>
+
+                            <div class="track-timeline">
+                                <div class="track-line-progress" id="track-line-fill" style="width: 50%;"></div>
+                                
+                                <div class="timeline-node active" id="node-1">
+                                    <div class="node-icon"><i data-lucide="check"></i></div>
+                                    <span class="node-label">Nhận Máy</span>
+                                    <span class="node-time" id="node-time-1">10:00 - 03/07</span>
+                                </div>
+                                <div class="timeline-node active" id="node-2">
+                                    <div class="node-icon"><i data-lucide="wrench"></i></div>
+                                    <span class="node-label">Kiểm Tra Lỗi</span>
+                                    <span class="node-time" id="node-time-2">10:30 - 03/07</span>
+                                </div>
+                                <div class="timeline-node" id="node-3">
+                                    <div class="node-icon"><i data-lucide="component"></i></div>
+                                    <span class="node-label">Đang Sửa</span>
+                                    <span class="node-time" id="node-time-3">...</span>
+                                </div>
+                                <div class="timeline-node" id="node-4">
+                                    <div class="node-icon"><i data-lucide="package-check"></i></div>
+                                    <span class="node-label">Hoàn Thành</span>
+                                    <span class="node-time" id="node-time-4">...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lookup-error-msg" id="track-error" style="display: none;">
+                            <i data-lucide="alert-triangle"></i> Không tìm thấy mã phiếu sửa chữa này trên hệ thống! Vui lòng kiểm tra lại.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Warranty Lookup -->
+                <div class="tab-pane" id="tab-warranty">
+                    <div class="lookup-panel-box">
+                        <h3>Kiểm Tra Thời Hạn Bảo Hành Linh Kiện</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">Nhập số điện thoại đăng ký sửa máy của bạn để xem danh sách linh kiện còn thời gian bảo hành.</p>
+                        
+                        <div class="lookup-input-bar">
+                            <input type="tel" id="warranty-input" placeholder="Ví dụ: 0368273019 (SĐT mẫu để thử)">
+                            <button class="btn btn-primary" id="btn-warranty-submit"><i data-lucide="search"></i> Kiểm tra</button>
+                        </div>
+
+                        <!-- Warranty list display -->
+                        <div class="warranty-result-box" id="warranty-result" style="display: none;">
+                            <h4 id="warranty-user-title">Lịch sử bảo hành của khách hàng: ...</h4>
+                            <div style="overflow-x: auto; margin-top:15px;">
+                                <table class="warranty-table" id="warranty-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Dòng máy</th>
+                                            <th>Linh kiện sửa chữa</th>
+                                            <th>Ngày sửa</th>
+                                            <th>Hạn bảo hành</th>
+                                            <th>Trạng thái</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dynamically inserted -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="lookup-error-msg" id="warranty-error" style="display: none;">
+                            <i data-lucide="alert-triangle"></i> Số điện thoại chưa có lịch sử sửa chữa hoặc linh kiện đã hết bảo hành.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Skills / Modules Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lộ Trình Đào Tạo Chuyên Sâu</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Chương trình học thiết kế chuẩn thực tế tại Văn Tài Mobile, đi từ nền tảng điện tử cơ bản đến kỹ thuật sửa chữa phức tạp.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Card 1 -->
+                <div class="skill-card tilt-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="skill-icon"><i data-lucide="component"></i></div>
+                    <h3 id="dyn-skill-title-1">Kỹ Thuật Vi Mạch & Hàn Chì</h3>
+                    <p id="dyn-skill-desc-1">Làm chủ kính hiển vi, đọc sơ đồ mạch schematics (ZXW, JCID), khò hàn thay thế IC nguồn, IC sóng, CPU chồng, và câu dây vi mạch dưới kích thước micro.</p>
+                    <ul class="skill-points">
+                        <li><i data-lucide="check-circle-2"></i> Đọc sơ đồ mạch phân tích bệnh</li>
+                        <li><i data-lucide="check-circle-2"></i> Kỹ thuật đóng IC chân bụng rập</li>
+                        <li><i data-lucide="check-circle-2"></i> Câu đường điện bị đứt ngầm</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="skill-card tilt-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="skill-icon"><i data-lucide="smartphone"></i></div>
+                    <h3 id="dyn-skill-title-2">Ép Kính & Sửa Chữa Màn Hình</h3>
+                    <p id="dyn-skill-desc-2">Vận hành dàn máy ép chân không hiện đại, cắt kính màn hình cong, thay phim phản quang, ép cáp cổ màn hình (fix xanh màn, nhấp nháy) của các dòng Flagship.</p>
+                    <ul class="skill-points">
+                        <li><i data-lucide="check-circle-2"></i> Sử dụng máy tách và làm sạch keo</li>
+                        <li><i data-lucide="check-circle-2"></i> Ép màn hình cong cao cấp</li>
+                        <li><i data-lucide="check-circle-2"></i> Ép cổ cáp màn hình công nghệ OLED</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="skill-card tilt-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="skill-icon"><i data-lucide="terminal"></i></div>
+                    <h3 id="dyn-skill-title-3">Lập Trình Phần Mềm & Unlock</h3>
+                    <p id="dyn-skill-desc-3">Sử dụng các hộp box chuyên dụng (EasyJtag, JC, UMT) để nạp rom, bypass tài khoản iCloud/Google, khôi phục dữ liệu, cứu máy brick, và nâng cấp dung lượng ổ cứng.</p>
+                    <ul class="skill-points">
+                        <li><i data-lucide="check-circle-2"></i> Unlock mạng & Bypass tài khoản</li>
+                        <li><i data-lucide="check-circle-2"></i> Đọc/Ghi dữ liệu IC EEPROM</li>
+                        <li><i data-lucide="check-circle-2"></i> Sửa lỗi FaceID & TrueTone</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="skill-card tilt-card" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="skill-icon"><i data-lucide="shield-alert"></i></div>
+                    <h3 id="dyn-skill-title-4">Chẩn Đoán Bệnh Siêu Tốc</h3>
+                    <p id="dyn-skill-desc-4">Rèn luyện tư duy đo đạc dòng rò bằng máy cấp nguồn, sử dụng đồng hồ vạn năng số để khoanh vùng pan bệnh chập chạm linh kiện trên bo mạch chỉ trong vài phút.</p>
+                    <ul class="skill-points">
+                        <li><i data-lucide="check-circle-2"></i> Phân biệt dòng rò trước/sau nguồn</li>
+                        <li><i data-lucide="check-circle-2"></i> Kỹ thuật dò tụ chập bằng nhựa thông khói</li>
+                        <li><i data-lucide="check-circle-2"></i> Xử lý thiết bị rơi nước, va đập mạnh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Section -->
+    <section class="simulator" id="simulator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trình Giả Lập Chẩn Đoán Lỗi</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Hãy thử hóa thân thành một kỹ thuật viên của Văn Tài Mobile và tiến hành sửa chữa các pan bệnh thực tế ngay bên dưới.</p>
+            </div>
+
+            <div class="sim-wrapper">
+                <!-- Phone Mockup Left -->
+                <div class="sim-phone-area">
+                    <div class="phone-frame">
+                        <div class="phone-earpiece"></div>
+                        <div class="phone-screen" id="sim-screen">
+                            <div class="screen-content default-state" id="screen-content">
+                                <div class="sim-phone-logo"><i data-lucide="smartphone"></i></div>
+                                <h3>HỆ THỐNG KIỂM TRA</h3>
+                                <p>Vui lòng chọn một lỗi ở bảng bên phải để bắt đầu chuẩn đoán và sửa chữa.</p>
+                                <div class="pulse-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diagnosis Panel Right -->
+                <div class="sim-panel-area">
+                    <h3>Bảng Điều Khiển Thiết Bị</h3>
+                    <p class="panel-desc">Chọn pan bệnh cần xử lý:</p>
+                    
+                    <div class="sim-issues-selector">
+                        <button class="btn-issue" data-issue="screen">
+                            <i data-lucide="image"></i> Màn hình nứt vỡ & Liệt cảm ứng
+                        </button>
+                        <button class="btn-issue" data-issue="power">
+                            <i data-lucide="battery-charging"></i> Máy chập nguồn (Không lên nguồn)
+                        </button>
+                        <button class="btn-issue" data-issue="faceid">
+                            <i data-lucide="smile"></i> Mất định danh gương mặt (Face ID)
+                        </button>
+                    </div>
+
+                    <!-- Step Tracker (Hidden by default, shown when issue selected) -->
+                    <div class="sim-steps-tracker" id="steps-tracker" style="display: none;">
+                        <h4 id="active-issue-title">Đang xử lý: ...</h4>
+                        
+                        <div class="steps-progress-bar">
+                            <div class="progress-line" id="progress-line"></div>
+                            <div class="progress-step active" data-step="1">1</div>
+                            <div class="progress-step" data-step="2">2</div>
+                            <div class="progress-step" data-step="3">3</div>
+                            <div class="progress-step" data-step="4">4</div>
+                        </div>
+
+                        <div class="step-details" id="step-details">
+                            <h5 id="step-title">Bước 1: Ráp máy vào đồ gá</h5>
+                            <p id="step-desc">Tiến hành vặn ốc đít và tách màn hình ra khỏi khung sườn bằng dụng cụ hút chân không chuyên nghiệp.</p>
+                        </div>
+
+                        <div class="step-actions">
+                            <button class="btn btn-secondary btn-sm" id="btn-prev-step" disabled>Quay Lại</button>
+                            <button class="btn btn-primary btn-sm" id="btn-next-step">Tiến Hành</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technician Toolkit Section -->
+    <section class="toolkit" id="toolkit">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Khám Phá Kho Dụng Cụ Cao Cấp</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Được tiếp xúc và thực hành 100% trên các thiết bị nhập khẩu hiện đại nhất thế giới hiện nay.</p>
+            </div>
+
+            <div class="toolkit-grid">
+                <!-- Tool Item 1 -->
+                <div class="tool-item scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="tool-icon-wrapper">
+                        <i data-lucide="microscope" class="tool-icon"></i>
+                    </div>
+                    <h3>Kính Hiển Vi Kính Ba Mắt</h3>
+                    <p class="tool-specs">Độ phóng đại 7X-45X • Đèn LED ring siêu sáng • Kết nối màn hình HDMI 4K</p>
+                    <p class="tool-usage">Giúp kỹ thuật viên nhìn rõ chân IC siêu nhỏ cỡ micromet, dễ dàng câu dây và hàn chì chính xác cao.</p>
+                </div>
+                <!-- Tool Item 2 -->
+                <div class="tool-item scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="tool-icon-wrapper">
+                        <i data-lucide="flame" class="tool-icon"></i>
+                    </div>
+                    <h3>Trạm Khò Hàn Thông Minh</h3>
+                    <p class="tool-specs">Điều khiển PID kỹ thuật số • Khống chế nhiệt tự động • Làm nóng siêu tốc 3 giây</p>
+                    <p class="tool-usage">Kiểm soát nhiệt độ gió khò chính xác để nhấc IC ra khỏi mainboard mà không làm hư hại hay xê dịch linh kiện xung quanh.</p>
+                </div>
+                <!-- Tool Item 3 -->
+                <div class="tool-item scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="tool-icon-wrapper">
+                        <i data-lucide="binary" class="tool-icon"></i>
+                    </div>
+                    <h3>JCID V1S Pro & Box Lập Trình</h3>
+                    <p class="tool-specs">Màn hình cảm ứng độc lập • Wifi đồng bộ Cloud • Đọc dữ liệu mã hóa</p>
+                    <p class="tool-usage">Thiết bị tối tân chuyên dùng để fix lỗi FaceID, ghi thông tin TrueTone màn hình, đồng bộ vân tay và sửa pin.</p>
+                </div>
+                <!-- Tool Item 4 -->
+                <div class="tool-item scroll-reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="tool-icon-wrapper">
+                        <i data-lucide="gauge" class="tool-icon"></i>
+                    </div>
+                    <h3>Đồng Hồ Vạn Năng Kỹ Thuật Số</h3>
+                    <p class="tool-specs">Độ chính xác cao 4 1/2 chữ số • Đo trở kháng siêu nhanh • Chế độ buzzer định vị chập mạch</p>
+                    <p class="tool-usage">Trợ thủ đo dòng điện, điện áp, kiểm tra đường đi của mạch xem có bị đứt hay chạm chập đất hay không.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Prospects & Opportunities Section -->
+    <section class="career" id="career">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tiềm Năng & Thu Nhập Của Ngành</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Thống kê thực tế về sự phát triển nghề nghiệp của kỹ thuật viên sửa chữa điện thoại theo số năm kinh nghiệm.</p>
+            </div>
+
+            <div class="career-content">
+                <!-- Salary Chart Visual -->
+                <div class="chart-container">
+                    <h3 class="chart-title"><i data-lucide="line-chart"></i> Thu Nhập Trung Bình Hàng Tháng (VND)</h3>
+                    <div class="bar-chart">
+                        <div class="chart-bar-group">
+                            <span class="bar-label">Mới tốt nghiệp</span>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill" style="width: 35%;" data-value="10 - 15 Triệu"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <span class="bar-label">1 - 3 Năm kinh nghiệm</span>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill" style="width: 60%;" data-value="18 - 25 Triệu"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <span class="bar-label">Trực thợ chính / Chuyên gia Mainboard</span>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill" style="width: 85%;" data-value="30 - 45 Triệu"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <span class="bar-label">Chủ cửa hàng dịch vụ</span>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill highlight-bar" style="width: 100%;" data-value="50 - 100+ Triệu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career List Text -->
+                <div class="career-paths">
+                    <h3>Định Hướng Việc Làm Sau Tốt Nghiệp</h3>
+                    <div class="path-card scroll-reveal" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="path-num">01</div>
+                        <div>
+                            <h4>Kỹ Thuật Viên Hệ Thống Lớn</h4>
+                            <p>Làm việc tại các trung tâm bảo hành của Apple, Samsung hoặc các chuỗi cửa hàng sửa chữa điện thoại lớn với thu nhập ổn định lâu dài.</p>
+                        </div>
+                    </div>
+                    <div class="path-card scroll-reveal" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="path-num">02</div>
+                        <div>
+                            <h4>Chuyên Gia Cứu Dữ Liệu & Vi Mạch</h4>
+                            <p>Nhận các kèo sửa nặng từ các cửa hàng nhỏ chuyển sang (sàng main, cứu ổ cứng). Thu nhập đột phá từ kỹ năng chuyên sâu độc quyền.</p>
+                        </div>
+                    </div>
+                    <div class="path-card scroll-reveal" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="path-num">03</div>
+                        <div>
+                            <h4>Tự Kinh Doanh & Làm Chủ Cửa Hàng</h4>
+                            <p>Văn Tài Mobile hỗ trợ nguồn linh kiện giá gốc, tư vấn kỹ thuật dài lâu để giúp bạn tự tin mở tiệm kinh doanh riêng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW MODIFIED BOOKING & REGISTRATION SECTION -->
+    <section class="register" id="booking-section">
+        <div class="container">
+            <div class="register-wrapper">
+                <!-- Column 1: Book Repair Appointment -->
+                <div class="register-form-box" style="background: rgba(10, 15, 30, 0.9);">
+                    <h3><i data-lucide="calendar" style="color:var(--accent-cyan); vertical-align:middle; margin-right:8px;"></i>Đặt Lịch Sửa Chữa Trực Tuyến</h3>
+                    <p>Chủ động chọn thời gian đến sửa máy để được Văn Tài Mobile phục vụ nhanh chóng nhất, không phải chờ đợi.</p>
+                    
+                    <form id="repair-booking-form">
+                        <div class="form-group">
+                            <label for="book-name">Họ và tên khách hàng</label>
+                            <input type="text" id="book-name" placeholder="Nguyễn Văn A" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-phone">Số điện thoại</label>
+                            <input type="tel" id="book-phone" placeholder="03xxxxxxxx" required>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap:15px; margin-bottom:15px;">
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="book-date">Chọn ngày đến</label>
+                                <input type="date" id="book-date" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="book-time">Chọn giờ đến</label>
+                                <input type="time" id="book-time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="book-device-desc">Dòng máy & Tình trạng lỗi</label>
+                            <input type="text" id="book-device-desc" placeholder="Ví dụ: iPhone 14 Pro Max - Thay màn hình" required>
+                        </div>
+
+                        <button type="submit" class="btn-submit" id="btn-book-submit">
+                            Xác Nhận Đặt Lịch Hẹn <i data-lucide="check"></i>
+                        </button>
+                    </form>
+                    
+                    <!-- Booking success mockup display -->
+                    <div id="booking-success" class="form-success-msg" style="display: none;">
+                        <i data-lucide="check-circle" style="color: var(--accent-green);"></i>
+                        <h4 class="text-success" style="font-weight:900;">ĐẶT LỊCH THÀNH CÔNG!</h4>
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; width: 100%; text-align: left; font-size: 0.85rem; line-height: 1.6;">
+                            <p>Mã lịch hẹn: <strong class="highlight" id="res-booking-code">VT-82918</strong></p>
+                            <p>Khách hàng: <span id="res-booking-user">...</span></p>
+                            <p>Thời gian: <span id="res-booking-datetime">...</span></p>
+                            <p style="color: var(--accent-green); margin-top:5px;"><i data-lucide="message-square" style="width:12px; height:12px; display:inline-block; vertical-align:middle;"></i> Đã gửi SMS xác nhận tới số điện thoại!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Enrollment Registration -->
+                <div class="register-form-box">
+                    <h3><i data-lucide="graduation-cap" style="color:var(--accent-purple); vertical-align:middle; margin-right:8px;"></i>Nhận Tư Vấn Khóa Học Nghề</h3>
+                    <p>Hãy điền thông tin bên dưới để nhận giáo trình chi tiết khóa học sửa điện thoại và voucher ưu đãi 35% học phí.</p>
+                    
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="fullname">Họ và tên học viên</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn B" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="tel" id="phone" name="phone" placeholder="09xxxxxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course-type">Chương trình quan tâm</label>
+                            <select id="course-type" name="course-type">
+                                <option value="all-in-one">Khóa Học Toàn Diện (Cơ bản đến Nâng cao)</option>
+                                <option value="mainboard">Chuyên sâu Vi mạch & Phần cứng nâng cao</option>
+                                <option value="screen">Chuyên sâu Ép kính & Thay màn hình</option>
+                                <option value="software">Khóa học Phần mềm & Unlock mạng</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-submit" id="btn-submit" style="background: linear-gradient(90deg, var(--accent-purple), #bf5af2); box-shadow: var(--glow-purple);">
+                            Gửi Đăng Ký Học Nghề <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                    <div id="form-success" class="form-success-msg" style="display: none;">
+                        <i data-lucide="check-circle" style="color: var(--accent-green);"></i>
+                        <p>Đăng ký thành công! Văn Tài Mobile sẽ liên hệ tư vấn tuyển sinh cho bạn trong vòng 24 giờ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i data-lucide="cpu" class="logo-icon"></i>
+                        <span>VĂN TÀI<span class="highlight"> MOBILE</span></span>
+                    </a>
+                    <p id="dyn-footer-brand-desc">Trung tâm sửa chữa điện thoại & Đào tạo kỹ thuật viên công nghệ cao. Uy tín - Chất lượng - Chuyên nghiệp hàng đầu.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Về Chúng Tôi</h4>
+                    <ul>
+                        <li><a href="#about">Giới thiệu</a></li>
+                        <li><a href="#quote-lookup">Báo giá dịch vụ</a></li>
+                        <li><a href="#skills">Chương trình học</a></li>
+                        <li><a href="admin.html"><i data-lucide="lock" style="width:12px; height:12px;"></i> Trang Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Thông Tin Liên Hệ</h4>
+                    <ul>
+                        <li id="dyn-footer-address"><i data-lucide="map-pin"></i> Ấp Nguyệt Lãng C, xã Bình Phú, tỉnh Vĩnh Long</li>
+                        <li id="dyn-footer-phone"><i data-lucide="phone"></i> Hotline: 0368 273 019</li>
+                        <li><i data-lucide="mail"></i> Email: vantaiphonerip@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Văn Tài Mobile. Bảo lưu mọi quyền.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE FLOATING LIVE CHATBOT WIDGET -->
+    <div class="chatbot-floating-bubble" id="chat-bubble">
+        <i data-lucide="message-circle" class="chat-open-icon"></i>
+        <i data-lucide="x" class="chat-close-icon" style="display: none;"></i>
+        <span class="chat-badge-pulse"></span>
+    </div>
+
+    <div class="chatbot-window" id="chat-window">
+        <div class="chatbot-header">
+            <div class="bot-avatar">
+                <i data-lucide="bot"></i>
+                <span class="online-indicator"></span>
+            </div>
+            <div class="bot-info">
+                <h4>Trợ Lý Văn Tài Mobile</h4>
+                <p>Hỗ trợ trực tuyến 24/7 (Phản hồi tức thì)</p>
+            </div>
+        </div>
+        
+        <div class="chatbot-messages" id="chat-messages">
+            <!-- Messages will be populated here -->
+            <div class="chat-msg bot-msg">
+                Chào bạn! Cảm ơn bạn đã ghé thăm Văn Tài Mobile. Tôi có thể giúp gì cho bạn hôm nay?
+            </div>
+        </div>
+        
+        <!-- Quick replies -->
+        <div class="chat-quick-replies" id="chat-quick-replies">
+            <button class="btn-quick-reply" data-reply="price">Báo giá sửa máy</button>
+            <button class="btn-quick-reply" data-reply="warranty">Kiểm tra bảo hành</button>
+            <button class="btn-quick-reply" data-reply="time">Giờ làm việc & Địa chỉ</button>
+        </div>
+
+        <form class="chatbot-input-area" id="chat-input-form">
+            <input type="text" id="chat-user-input" placeholder="Nhập câu hỏi của bạn..." required>
+            <button type="submit" class="btn-chat-send" aria-label="Gửi tin nhắn"><i data-lucide="send"></i></button>
+        </form>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+    <script>
+        // Initialize lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
